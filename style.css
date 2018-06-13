@@ -1,0 +1,84 @@
+/*must-*/
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin:0px;
+    padding:0px;
+}
+body {
+    background-color:#9DACFF;
+}
+.title{
+    font-size: 36px;
+    font-weight: bold;
+    text-align:center;
+}
+.menu-desktop{
+    text-align:center;
+    display:block;
+}
+.menu-mobile{
+    text-align:center;
+    display:none;
+}
+.frame{
+    width: 1200px;
+    margin: 0px auto;/*must*/
+    text-align:center;/*must*/
+}
+.box{
+    width:160px;
+    margin:10px;
+    display: inline-block;/*must*/
+    vertical-align:top;/*must*/
+    background-color: #564787;
+    color: white;
+}
+
+/*CSS 3 Media Query-做RWD最重要的工具*/
+@media (max-width:1200px) {
+    /*螢幕尺寸介於500px - 1200px，套用這個區塊設定*/
+    .title{
+        font-size:28px;
+    }
+    .menu-desktop{
+        text-align:center;
+        display:block;
+    }
+    .menu-mobile{
+        text-align:center;
+        display:none;
+    }
+    .frame{
+        width: 100%;/*must*/
+    }
+    
+    .box{
+        width: 45%;/*must*/
+    }
+}
+
+
+@media (max-width:500px) {
+    /*螢幕尺寸小於500px的時候，套用這個區塊設定*/
+    .title{
+        font-size:20px;
+    }
+    .menu-desktop{
+        text-align:center;
+        display:none;
+    }
+    .menu-mobile{
+        text-align:center;
+        display:block;
+    }
+    .frame{
+        width: 100%;
+    }
+
+    .box{
+        width: 80%;
+    }
+}
